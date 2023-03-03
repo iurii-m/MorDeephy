@@ -6,10 +6,15 @@ The benchmarking is based on the public data.
 It is firmly recommended not to use it during training of your algorithms in case you plan to submit your results here. 
 
 #### Bona Fide datasets
+
 [AR](https://www2.ece.ohio-state.edu/~aleix/ARdatabase.html)
+
 [PICS-Aberdeen](http://pics.stir.ac.uk/2D_face_sets.htm)
+
 [PICS-utrecht](http://pics.stir.ac.uk/2D_face_sets.htm)
+
 [FEI](https://fei.edu.br/~cet/facedatabase.html)
+
 [FRLL](https://figshare.com/articles/dataset/Face_Research_Lab_London_Set/5047666)
 
 #### Morph Datasets 
@@ -33,11 +38,11 @@ cd face_morphing_benchmark
 python data_extract.py
 ```
 
-##No-Reference Protocols generation
+## No-Reference Protocols generation
 
 New protocols can be denerated with fmb_sd_generate_protocol.py script. The manual definition of the included datasets in the script is required.
 
-##Differential Protocols generation
-###TODO
+## Differential Protocols generation
+### TODO
 
 
