@@ -23,7 +23,7 @@ python sd_demo_extracting_predictions.py -m <your modelname> -n <protocol name>
 ### TODO
 
 
-#Submistting and contributing
+# Submistting and contributing
 ### How to submit your results
 #### TODO
 If you are not confident with git, suggest to have separate projects for development and for making submissions.
