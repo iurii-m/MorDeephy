@@ -1,0 +1,6 @@
+# data for benchmarking
+data_raw/
+data_raw_/
+data_extracted/
+data_aligned/
+benchmark_data/

@@ -1,0 +1,12 @@
+Protocol for Single Image Morphing detection:
+
+Morped datasets in the protocol:
+FRLL-Morphs/facelab_london/morph_amsl
+Dustone_Morphs/morph_set
+
+Bona Fide datasets in the protocol:
+Face_Research_Lab_London_Set/neutral_front/neutral_front
+AR
+FEI
+Aberdeen
+utrecht
