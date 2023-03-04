@@ -15,7 +15,7 @@ python sd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> 
 ```
 3. Computing the result performance curves:
 ```
-python sd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> 
+python sd_benchmark_model.py -m <your modelname> -n <protocol name> 
 ```
  
 
