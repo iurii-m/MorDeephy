@@ -17,6 +17,7 @@ import zlib
 from pathlib import Path
 from unlzw import unlzw
 import gzip
+import patoolib
 
 
 Dustone_Password = "********" 
@@ -138,6 +139,36 @@ except:
     print("Error while Face_Research_Lab_London_Set extracting")
 
 
+
+#Extract Dataset of Ethnic Facial Images of Ecuadorian People
+try:
+    print("Start extracting Dataset of Ethnic Facial Images of Ecuadorian People")
+    
+    os.makedirs(os.path.dirname(args.data_extracted_path)+"/EFIEP/", exist_ok=True) 
+    
+    with zipfile.ZipFile(args.data_raw_path + "/EFIEP.zip", 'r') as zip_ref:
+        zip_ref.extractall(args.data_extracted_path+ "/EFIEP/") 
+     
+    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Afro-ecuadorians.rar", outdir=args.data_extracted_path+ "/EFIEP/")   
+    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/European descendants.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
+    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Indigenous.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
+    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Mestizos.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
+
+
+    print("Dataset of Ethnic Facial Images of Ecuadorian People is extracted")
+except:
+    print("Error while Dataset of Ethnic Facial Images of Ecuadorian People extracting")
+
+
+#extract MIT-CBCL dataset
+try:
+    print("Start extracting MIT-CBCL")
+    os.makedirs(os.path.dirname(args.data_extracted_path)+"/MIT-CBCL/", exist_ok=True) 
+    with zipfile.ZipFile(args.data_raw_path + "/MIT-CBCL-facerec-database.zip", 'r') as zip_ref:
+        zip_ref.extractall(args.data_extracted_path+ "/MIT-CBCL/") 
+    print("MIT-CBCL is extracted")
+except:
+    print("Error while MIT-CBCL extracting")
 
 
 #MORPH DATASETS

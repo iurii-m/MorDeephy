@@ -6,3 +6,8 @@ scikit-learn
 scipy
 tensorflow-gpu>=2.5
 tqdm
+patool
+gzip
+unlzw
+zlib
+patoolib

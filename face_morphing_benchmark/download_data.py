@@ -127,6 +127,22 @@ except:
 
 
 
+#Get Dataset of Ethnic Facial Images of Ecuadorian People
+try:
+    print("Start Downloading Dataset of Ethnic Facial Images of Ecuadorian People")
+    URL = "https://figshare.com/ndownloader/articles/8266730/versions/3"
+    response = requests.get(URL)
+    open(args.data_path+"/EFIEP.zip", "wb").write(response.content)
+    print("Dataset of Ethnic Facial Images of Ecuadorian People is downloaded")
+except:
+    print("Error while Dataset of Ethnic Facial Images of Ecuadorian People download")
+
+#Get MIT-CBCL dataset
+#Download manually due to the "registration" on a website 
+#http://cbcl.mit.edu/software-datasets/heisele/facerecognition-database.html
+
+
+
 #MORPH DATASETS
 
 #Get FRGC-Morphs dataset #unavailable at Feb2023

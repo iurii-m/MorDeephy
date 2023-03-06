@@ -317,11 +317,12 @@ def generate_public_sd_protocol():
                                                     "AR",
                                                     "FEI",
                                                     "Aberdeen",
-                                                    "utrecht"]
+                                                    "utrecht",
+                                                    "MIT-CBCL/training-originals"]
     
     
     morphing_datasets_list_as_folder_with_folders_of_images = []
-    original_datasets_list_as_folder_with_folders_of_images = []
+    original_datasets_list_as_folder_with_folders_of_images = ["EFIEP"]
     
     #Protocol parameters
     protocol_name = "protocol_sd_full"
