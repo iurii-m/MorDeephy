@@ -25,10 +25,80 @@ python sd_benchmark_model.py -m <your modelname> -n <protocol name>
 
 # Submistting and contributing
 ### How to submit your results
-#### TODO
+We propose to make a submission as a *pull request* (PR) to this repository.
+How to PR to public repo is explained here: [manual official](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request), [manual simple](https://www.geeksforgeeks.org/creating-a-pull-request-on-any-public-repository-from-github-using-vs-code/)
+
+The process can be summarized to the following pipeline:
+
+1. Login to your github account and fork this repository.
+
+2. Submit your results following the requirements to your fork and then make PR to the original repo.
+    Here we propose two tested options: **Regular** and **Simple**.
+    **Simple.** Uploading files right at the github website. 
+
+    1. For each submitted protocol you need to create a directory in your fork.
+    Use "Add File -> Create new file" option to create ```README.md``` file indicating its name with a realtive path to a corresponding results directory, which you want to add.
+    Feel free to organize the ```README.md``` file to better represent your submission.
+    2. Navigate to the created folder and use ```Add File -> Upload files``` to upload files for your submission.
+    3. Make a PR to the original repo with the appeared ```Contribute``` button. 
+
+    **Regular.**
+    
+    1. Clone your fork to your local machiene.
+    
+    ```
+    git clone https://github.com/visteam-isr-uc/MorDeephy.git
+    cd MorDeephy
+    ```
+    2. Optionally change your branch to the name of your submission (better practice).
+    Howerer it is ok and indeed more simple to stay on *master*.
+    
+    ```
+    git branch <your_submission_branch>
+    ```   
+    3. Execute the script for preparing submission or Copy your submission files to the corresponding folders.
+    ```
+    TODO
+    ``` 	
+    4. Add and commit your changes.
+    ```
+    git add <your files for submission or just "." to add all new>
+    git commit -m “<submission name>”
+
+    ``` 
+    5. Push changes to the current branch of your forked repository.
+    ```
+    git push –set-upstream origin <your current branch>
+    ```
+    To authenticate this step github doesnt allow using regular credentials. We propose to [Generate classic token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic). Further authentification for push can be made using it instead of a password.
+
+    6. Configure a Remote for the Fork
+    ```
+    git remote add upstream https://github.com/iurii-m/MorDeephy.git
+    git remote -v
+    ```
+    Output will be:
+    ```
+    origin  https://github.com/visteam-isr-uc/MorDeephy.git (fetch)
+    origin  https://github.com/visteam-isr-uc/MorDeephy.git (push)
+    upstream        https://github.com/iurii-m/MorDeephy.git (fetch)
+    upstream        https://github.com/iurii-m/MorDeephy.git (push)
+    ```
+    7. Sync the fork
+    ```
+    git fetch upstream
+    ```
+    8. Open your forked repo on github and Create Pull Request with appeared alert button.
+ 
 
 
-*If you are not confident with git, suggest to have separate projects for development and for making submissions and perform manualfile copying.*
+*If you are not confident with git, suggest to have separate projects for development and for making submissions and perform manual file copying.*
+
+#### Submission requirements
+##### TODO
+
+
+
 
 
 ### Submitting protocols and data
