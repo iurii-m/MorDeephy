@@ -150,7 +150,7 @@ try:
         zip_ref.extractall(args.data_extracted_path+ "/EFIEP/") 
      
     patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Afro-ecuadorians.rar", outdir=args.data_extracted_path+ "/EFIEP/")   
-    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/European descendants.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
+    patoolib.extract_archive(args.data_extracted_path + "/EFIEP/European-descendants.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
     patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Indigenous.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
     patoolib.extract_archive(args.data_extracted_path + "/EFIEP/Mestizos.rar", outdir=args.data_extracted_path+ "/EFIEP/") 
 

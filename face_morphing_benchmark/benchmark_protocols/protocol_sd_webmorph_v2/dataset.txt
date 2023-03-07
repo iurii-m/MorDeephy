@@ -1518,56 +1518,56 @@
 /EFIEP/Afro-ecuadorians/003_7.JPG
 /EFIEP/Afro-ecuadorians/003_8.JPG
 /EFIEP/Afro-ecuadorians/003_9.JPG
-/EFIEP/European descendants/002_1.JPG
-/EFIEP/European descendants/002_10.JPG
-/EFIEP/European descendants/002_11.JPG
-/EFIEP/European descendants/002_12.JPG
-/EFIEP/European descendants/002_13.JPG
-/EFIEP/European descendants/002_14.JPG
-/EFIEP/European descendants/002_15.JPG
-/EFIEP/European descendants/002_16.JPG
-/EFIEP/European descendants/002_17.JPG
-/EFIEP/European descendants/002_18.JPG
-/EFIEP/European descendants/002_19.JPG
-/EFIEP/European descendants/002_2.JPG
-/EFIEP/European descendants/002_20.JPG
-/EFIEP/European descendants/002_21.JPG
-/EFIEP/European descendants/002_22.JPG
-/EFIEP/European descendants/002_23.JPG
-/EFIEP/European descendants/002_24.JPG
-/EFIEP/European descendants/002_25.JPG
-/EFIEP/European descendants/002_26.jpg
-/EFIEP/European descendants/002_27.JPG
-/EFIEP/European descendants/002_28.jpg
-/EFIEP/European descendants/002_29.JPG
-/EFIEP/European descendants/002_3.JPG
-/EFIEP/European descendants/002_30.JPG
-/EFIEP/European descendants/002_31.JPG
-/EFIEP/European descendants/002_32.JPG
-/EFIEP/European descendants/002_33.JPG
-/EFIEP/European descendants/002_34.JPG
-/EFIEP/European descendants/002_35.JPG
-/EFIEP/European descendants/002_36.JPG
-/EFIEP/European descendants/002_37.JPG
-/EFIEP/European descendants/002_38.JPG
-/EFIEP/European descendants/002_39.JPG
-/EFIEP/European descendants/002_4.JPG
-/EFIEP/European descendants/002_40.JPG
-/EFIEP/European descendants/002_41.JPG
-/EFIEP/European descendants/002_42.JPG
-/EFIEP/European descendants/002_43.JPG
-/EFIEP/European descendants/002_44.JPG
-/EFIEP/European descendants/002_45.JPG
-/EFIEP/European descendants/002_46.JPG
-/EFIEP/European descendants/002_47.JPG
-/EFIEP/European descendants/002_48.JPG
-/EFIEP/European descendants/002_49.JPG
-/EFIEP/European descendants/002_5.JPG
-/EFIEP/European descendants/002_50.JPG
-/EFIEP/European descendants/002_6.JPG
-/EFIEP/European descendants/002_7.JPG
-/EFIEP/European descendants/002_8.JPG
-/EFIEP/European descendants/002_9.JPG
+/EFIEP/European-descendants/002_1.JPG
+/EFIEP/European-descendants/002_10.JPG
+/EFIEP/European-descendants/002_11.JPG
+/EFIEP/European-descendants/002_12.JPG
+/EFIEP/European-descendants/002_13.JPG
+/EFIEP/European-descendants/002_14.JPG
+/EFIEP/European-descendants/002_15.JPG
+/EFIEP/European-descendants/002_16.JPG
+/EFIEP/European-descendants/002_17.JPG
+/EFIEP/European-descendants/002_18.JPG
+/EFIEP/European-descendants/002_19.JPG
+/EFIEP/European-descendants/002_2.JPG
+/EFIEP/European-descendants/002_20.JPG
+/EFIEP/European-descendants/002_21.JPG
+/EFIEP/European-descendants/002_22.JPG
+/EFIEP/European-descendants/002_23.JPG
+/EFIEP/European-descendants/002_24.JPG
+/EFIEP/European-descendants/002_25.JPG
+/EFIEP/European-descendants/002_26.jpg
+/EFIEP/European-descendants/002_27.JPG
+/EFIEP/European-descendants/002_28.jpg
+/EFIEP/European-descendants/002_29.JPG
+/EFIEP/European-descendants/002_3.JPG
+/EFIEP/European-descendants/002_30.JPG
+/EFIEP/European-descendants/002_31.JPG
+/EFIEP/European-descendants/002_32.JPG
+/EFIEP/European-descendants/002_33.JPG
+/EFIEP/European-descendants/002_34.JPG
+/EFIEP/European-descendants/002_35.JPG
+/EFIEP/European-descendants/002_36.JPG
+/EFIEP/European-descendants/002_37.JPG
+/EFIEP/European-descendants/002_38.JPG
+/EFIEP/European-descendants/002_39.JPG
+/EFIEP/European-descendants/002_4.JPG
+/EFIEP/European-descendants/002_40.JPG
+/EFIEP/European-descendants/002_41.JPG
+/EFIEP/European-descendants/002_42.JPG
+/EFIEP/European-descendants/002_43.JPG
+/EFIEP/European-descendants/002_44.JPG
+/EFIEP/European-descendants/002_45.JPG
+/EFIEP/European-descendants/002_46.JPG
+/EFIEP/European-descendants/002_47.JPG
+/EFIEP/European-descendants/002_48.JPG
+/EFIEP/European-descendants/002_49.JPG
+/EFIEP/European-descendants/002_5.JPG
+/EFIEP/European-descendants/002_50.JPG
+/EFIEP/European-descendants/002_6.JPG
+/EFIEP/European-descendants/002_7.JPG
+/EFIEP/European-descendants/002_8.JPG
+/EFIEP/European-descendants/002_9.JPG
 /EFIEP/Indigenous/001_1.JPG
 /EFIEP/Indigenous/001_10.JPG
 /EFIEP/Indigenous/001_11.JPG
