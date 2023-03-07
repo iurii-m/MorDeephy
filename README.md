@@ -26,12 +26,14 @@ python sd_benchmark_model.py -m <your modelname> -n <protocol name>
 # Submistting and contributing
 ### How to submit your results
 #### TODO
-If you are not confident with git, suggest to have separate projects for development and for making submissions.
+
+
+*If you are not confident with git, suggest to have separate projects for development and for making submissions and perform manualfile copying.*
 
 
 ### Submitting protocols and data
 If you have data related to face morphing, consider extending the functionality of this repo.
-Uf you propose to use some custom protocol, you can generate them and PR to the repo [Protocols_generation](./face_morphing_benchmark)
+If you propose to use some custom protocol, you can generate them and PR to the repo [Protocols_generation](./face_morphing_benchmark)
 Please separate those PRs from PRs for results submission 
 
 ## Results comparison
@@ -54,7 +56,7 @@ See the preparation details here [(data_processing)](./face_morphing_benchmark)
 
 #### Morph Datasets 
 - [FRLL-Morphs](https://www.idiap.ch/en/dataset/frll-morphs)
-- [Dustone_Morphs](https://www.linkedin.com/pulse/new-face-morphing-dataset-vulnerability-research-ted-dunstone/)
+- [Dustone_Morphs](https://www.linkedin.com/pulse/new-face-morphing-dataset-vulnerability-research-ted-dunstone/) (email request is required)
 
 Some data ([FRGC-Morphs](https://www.idiap.ch/en/dataset/frgc-morphs) and [FERET-Morphs](https://www.idiap.ch/en/dataset/feret-morphs) datasets) is now unavailable due to the withdrawal.
 

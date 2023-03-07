@@ -16,7 +16,7 @@ It is firmly recommended not to use it during training of your algorithms in cas
 
 #### Morph Datasets 
 - [FRLL-Morphs](https://www.idiap.ch/en/dataset/frll-morphs)
-- [Dustone_Morphs](https://www.linkedin.com/pulse/new-face-morphing-dataset-vulnerability-research-ted-dunstone/)
+- [Dustone_Morphs](https://www.linkedin.com/pulse/new-face-morphing-dataset-vulnerability-research-ted-dunstone/) (email request is required)
 
 Some data ([FRGC-Morphs](https://www.idiap.ch/en/dataset/frgc-morphs) and [FERET-Morphs](https://www.idiap.ch/en/dataset/feret-morphs) datasets) is now unavailable due to the withdrawal.
 
