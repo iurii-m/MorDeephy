@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan 19 14:43:28 2021
+Script for estimating the performance basing on the predictions of the model.
 
+@author: iurii
 """
 
 import argparse
