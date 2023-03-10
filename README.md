@@ -32,22 +32,16 @@ How to PR to public repo is explained here: [manual official](https://docs.githu
 The process can be summarized to the following pipeline:
 
 **1.** Login to your github account and fork this repository.
-
 **2.** Submit your results following the requirements to your fork and then make PR to the original repo.
    Here we propose two tested options: **Regular** and **Simple**.
-    
     ***2.1. Simple.*** Uploading files right at the github website. 
-
     *2.1.1.* For **each submitted protocol** you need to create a directory in your fork in "submittions" directory.
     Use "Add File -> Create new file" option to create ```README.md``` file indicating its name with a realtive path to a corresponding results directory, which you want to add.
     *2.1.2.* Navigate to the created folder and use ```Add File -> Upload files``` to upload files for your submission.
     *2.1.3.* Create ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requrements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
     *2.1.4.* Make a PR to the original repo with the appeared ```Contribute``` button. 
-
     ***2.2. Regular.*** 
-    
     *2.2.1.* Clone your fork to your local machiene.
-    
     ```
     cd <projects_path>
     git clone https://github.com/<your_github_username>/MorDeephy.git
@@ -55,7 +49,6 @@ The process can be summarized to the following pipeline:
     ```
     *2.2.2.* Optionally change your branch to the name of your submission (better practice).
     Howerer it is ok and indeed more simple to stay on *master*.
-    
     ```
     git branch <your_submission_branch>
     ```   
@@ -69,19 +62,16 @@ The process can be summarized to the following pipeline:
     ``` 	
     If the requred README.md is created in ```./models/<your_submission_name>/``` it will be also copied with the above command.
     Otherwise create corresponding ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requrements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
-    
     *2.2.4.* Add and commit your changes. Please dont add changes which are not related to your submission. If you want, then do it in a separate PR. 
     ```
     git add <your files for submission or just "." to add all new>
     git commit -m “Submission <submission name>”
-
     ``` 
     *2.2.5.* Push changes to the current branch of your forked repository.
     ```
     git push --set-upstream origin <your current branch>
     ```
     To authenticate this step github doesnt allow using regular credentials. We propose to [Generate classic token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic). Further authentification for push can be made using it instead of a password.
-
     *2.2.6.* Configure a Remote for the Fork
     ```
     git remote add upstream https://github.com/iurii-m/MorDeephy.git
@@ -98,13 +88,9 @@ The process can be summarized to the following pipeline:
     ```
     git fetch upstream
     ```
-    *2.2.8.* Open your forked repo on github and Create Pull Request with appeared alert button.
-
+    *2.2.8.* Open your forked repo on github and Create Pull Request with appeared alert button.  
 *If you are not confident with git, suggest to have separate projects for development and for making submissions and perform manual file copying.*
-
 <!-- **3.** To prove the identity of submitter, we also ask send an email to ```iurii.medvedev@isr.uc.pt``` (Subject - MorDeephy. ```<submission_name>```) with a sumbittion name or PR number from your adress with institutional domain. -->
-
-
 
 ### Submission requirements
 
