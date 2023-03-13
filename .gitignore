@@ -1,6 +1,6 @@
 # models files. usually big
 models/
-submissions/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
