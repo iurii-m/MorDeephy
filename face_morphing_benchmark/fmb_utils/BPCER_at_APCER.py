@@ -25,6 +25,36 @@ def get_ROC_metric(predictions,
                    FMR_compare = []):
 
     
+    """
+    Computes and plots the Receiver Operating Characteristic (ROC) curve for a binary classification model,
+    along with the Area Under the Curve (AUC) score. Saves the ROC curve as a .png file.
+    
+    Parameters:
+    ----------  
+    - predictions (list or numpy array): predicted labels for each sample
+    - gt_labels (list or numpy array): ground truth labels for each sample
+    - protocol_name (str): name of the protocol being evaluated
+    - model_name (str): name of the model being evaluated
+    - benchmark_data_path (str): path to the directory where benchmarking data will be saved
+    
+    Returns: 
+    ----------      
+    None
+    
+    Output:
+    ----------  
+    - Saves the ROC curve plot as a PNG image in the benchmark_data_path folder, with a file name 
+    containing the AUC value and the model and protocol names.
+    - Saves the TPR and FPR values in a CSV file named "tpr_fpr.csv" in the protocol_name folder inside the model_name folder.
+    - Calculates and saves the accuracy, FPR, FNR, and threshold values in a CSV file named 
+    "ROC_metrics.csv" in the protocol_name folder inside the model_name folder.
+    - Calculates and saves the maximum accuracy in a CSV file named "top_accuracy.csv" in the 
+    protocol_name folder inside the model_name folder.
+    - Calculates and saves the FNR at specific FPR values specified in the FMR_compare argument in a 
+    CSV file named "FNMR@FMR.csv" in the protocol_name folder inside the model_name folder.
+    """       
+ 
+    
     #create protocol folder in the model folder if so far not created
     os.makedirs('%s/%s/%s' %(benchmark_data_path, model_name, protocol_name), exist_ok=True)
 
@@ -119,7 +149,29 @@ def get_DET_metric(predictions,
                    benchmark_data_path = "models", 
                    APCER_compare = []):
     
+    """
+    Computes and saves the Detection Error Tradeoff (DET) curve and Equal Error Rate (EER) for a given set of predictions
+    and ground truth labels. 
     
+    Parameters
+    ----------
+    - predictions (array-like): The predicted scores for each sample.
+    - gt_labels (array-like): The ground truth labels (0 or 1) for each sample.
+    - protocol_name (str): The name of the evaluation protocol.
+    - model_name (str): The name of the model being evaluated.
+    - benchmark_data_path (str): The path to the directory where the benchmark data is saved.
+    - APCER_compare (list): A list of APCER values to compare against. Default is an empty list.
+    
+    Returns:
+    ----------
+    - None
+    
+    Saves:
+    ----------
+    - A CSV file with the APCER and BPCER values.
+    - A PNG image of the DET curve.
+    
+    """
     #create protocol folder in the model folder if so far not created
     os.makedirs('%s/%s/%s' %(benchmark_data_path, model_name, protocol_name), exist_ok=True)
 
@@ -204,6 +256,134 @@ def get_accuracy_metric():
         csv_writer.writerow(FMR)
         csv_writer.writerow(FNMR)
     
+def plot_combined_roc(protocol_name, 
+                      submissions_path, 
+                      submission_names,
+                      all_predictions, 
+                      all_gt_labels, 
+                      save_name):
+    """
+    Description: This function generates a combined ROC plot for multiple submissions 
+    in a given evaluation protocol. It takes as input the protocol name, the path to 
+    submission files, the list of submission names, the list of predicted scores, the 
+    list of ground-truth labels, and the name to save the plot.
+
+    Parameters
+    ----------
+    - protocol_name (str): The name of the evaluation protocol.
+    - submissions_path (str): The path to the submission files.
+    - submission_names (list of str): The list of names of the submissions to be evaluated.
+    - all_predictions (list of ndarray): The list of predicted scores for each submission.
+    - all_gt_labels (list of ndarray): The list of ground-truth labels for each submission.
+    - save_name (str): The name of the file to save the plot.
+    
+    Returns
+    -------
+    None.
+    
+    Output
+    -------
+    A ROC plot with all the submissions superimposed on the same plot.
+    The Area Under the Curve (AUC) for each submission is printed in the console.
+    """
+
+    
+    fig = plt.figure(figsize=(8,5))
+    lw = 1
+    font_size = 14
+    
+    est_data = []
+    #If no particular models are chosen, plot all models:
+    for idx, submission in enumerate(submission_names):
+
+      
+        fpr, tpr, thresholds = roc_curve(all_gt_labels[idx], all_predictions[idx], pos_label=1)
+        auc_res = roc_auc_score(all_gt_labels[idx], all_predictions[idx])
+        auc_res_5f =  "{:.5f}".format(auc_res)
+        print(submission, "AUC ROC - ", auc_res_5f)
+        est_data.append((fpr, tpr, thresholds))
+        legend_name =  submission+ " AUC ROC - "+ str(auc_res_5f)
+        plt.plot(fpr, tpr, lw=lw, label = legend_name)
+        
+    # plt.xlim([0.0, 1.0])
+    # plt.ylim([0.0, 1.0])
+    plt.xticks(fontsize=font_size)
+    plt.yticks(fontsize=font_size)
+    plt.xlabel('False Positive Rate',fontsize = font_size)
+    plt.ylabel('True Positive Rate',fontsize = font_size)
+    plt.legend(loc="lower right")
+    plt.legend(loc="lower right",fontsize=font_size)
+    plt.tight_layout()
+    plt.title('ROC_' + protocol_name,fontsize = font_size)
+    #plt.yscale('log')
+    #plt.xscale('log')
+    plt.show()      
+    fig.savefig(save_name)                 
+        
+
+
+
+def plot_combined_det(protocol_name, 
+                      submissions_path, 
+                      submission_names, 
+                      all_predictions, 
+                      all_gt_labels, 
+                      save_name):
+    """
+
+    This function plots a Detection Error Tradeoff (DET) curve for each submission 
+    specified in submission_names. For each submission, the 
+    APCER (Attack Presentation Classification Error Rate), 
+    BPCER (Bona Fide Presentation Classification Error Rate), and thresholds are 
+    calculated using the det_curve function. The Equal Error Rate (EER) is also calculated 
+    and printed for each submission. The function then plots the APCER vs BPCER curves 
+    for each submission on a log-log scale and saves the plot to a file specified by save_name.
+
+
+    Parameters
+    ----------
+    protocol_name: a string representing the name of the protocol to plot (e.g. 'protocol_1')
+    submissions_path: a string representing the path to the directory where the submission files are located
+    submission_names: a list of strings representing the names of the submission files to plot
+    all_predictions: a list of arrays representing the predicted scores for each submission
+    all_gt_labels: a list of arrays representing the ground truth labels for each submission
+    save_name: a string representing the name of the file to save the plot to
+    
+    Returns
+    -------
+    None.
+
+    """
+    
+    fig = plt.figure(figsize=(8,5))
+    lw = 1
+    font_size = 14
+
+    est_data = []
+    for idx, submission in enumerate(submission_names):
+        APCER, BPCER, thresholds = det_curve(all_gt_labels[idx], all_predictions[idx], pos_label=1)
+       
+        # Calculate EER
+        substr = np.abs(APCER-BPCER)
+        min_summy_idx = np.argmin(substr)
+        EqER = APCER[min_summy_idx]
+        EqER_4f = "{:.4f}".format(EqER)
+        print(submission, "EER - ", EqER_4f)
+        
+        est_data.append((APCER, BPCER, thresholds))
+        legend_name = submission + " EER - " + str(EqER_4f)
+        plt.plot(APCER, BPCER, lw=lw, label=legend_name)
+
+    plt.xticks(fontsize=font_size)
+    plt.yticks(fontsize=font_size)
+    plt.xlabel('APCER', fontsize=font_size)
+    plt.ylabel('BPCER', fontsize=font_size)
+    plt.legend(loc="lower left", fontsize=font_size)
+    plt.title('DET_' + protocol_name, fontsize=font_size)
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.show()
+    fig.savefig(save_name)
 
 def unit_test_ROC():
     #basic test
@@ -294,20 +474,16 @@ def load_metrics_data(protocol_name, model_name, metric_name = "tpr_fpr", benchm
 
     Parameters
     ----------
-    protocol_name : string
-        Name of the protocol to load the data from
-    model_name : string
-        Name of the model where the metrics file is
-    metric_name : string, optional
-        Name of the metric file to be loaded. The default is "tpr_fpr".
-    models_path : string, optional
-        Path to the models folder. The default is "models".
+    protocol_name : string Name of the protocol to load the data from
+    model_name : string Name of the model where the metrics file is
+    metric_name : string, optional Name of the metric file to be loaded. The default is "tpr_fpr".
+    models_path : string, optional Path to the models folder. The default is "models".
         
     Returns
     -------
-    metrics_array : np.array 
-        np.array of metric file
+    metrics_array : np.array  np.array of metric file
     """
+    
     filename = metric_name + ".csv"
     metrics_array = np.genfromtxt(os.path.join(benchmark_data_path,model_name,protocol_name,filename), delimiter=",")
     

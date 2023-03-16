@@ -15,15 +15,15 @@ import shutil
         
     
 def parse_args():
-    
+
     parser = argparse.ArgumentParser() 
-    parser.add_argument('-m', '--model_name', default="test_model2", type=str, help='name of the model')
-    parser.add_argument('-s', '--submission_name', default="test_model_001", type=str, help='name of the submission')
-    parser.add_argument('-n', '--protocol_name', default=None, type=str, help='name of the protocol')
-    parser.add_argument('-p', '--models_path', default="./models", type=str, help='path to the models')
-    parser.add_argument('-b', '--submissions_path', default="./submissions", type=str, help='path to the submissions')
-    parser.add_argument('-r', '--predictions_filename', default="predictions.txt", type=str, help='path to the models')
-    parser.add_argument('-l', '--gt_labels_filename', default="gt_labels.txt", type=str, help='path to the models')
+    parser.add_argument('-m', '--model_name', default="test_model2", type=str, help='A string containing the name of the model for which the submission is being prepared')
+    parser.add_argument('-s', '--submission_name', default="test_model_001", type=str, help=' A string containing the name of the submission.')
+    parser.add_argument('-n', '--protocol_name', default=None, type=str, help='A string containing the name of the protocol for which the submission is being prepared. If this is not provided, then all protocols will be considered.')
+    parser.add_argument('-p', '--models_path', default="./models", type=str, help='A string containing the path to the directory where the model is saved.')
+    parser.add_argument('-b', '--submissions_path', default="./submissions", type=str, help='A string containing the path to the directory where the submission is to be saved')
+    parser.add_argument('-r', '--predictions_filename', default="predictions.txt", type=str, help='A string containing the name of the predictions file.')
+    parser.add_argument('-l', '--gt_labels_filename', default="gt_labels.txt", type=str, help='A string containing the name of the ground truth labels file')
     args = parser.parse_args()
       
     return args
@@ -32,6 +32,22 @@ def parse_args():
 
 
 def prepare_submission(args):
+    """
+    The function takes in an args object that contains several arguments needed for preparing a 
+    submission. The function prepares a submission by copying the required files from the source 
+    directory to the destination directory. The function performs the following tasks:
+    
+    -Lists all protocols if no specific protocol is provided or appends only the required 
+    protocol if a specific protocol is provided.
+    
+    -Copies the predictions and ground truth labels files for each protocol from the 
+    source directory to the destination directory, where the destination directory is determined by the submission_name argument.
+    
+    -Copies the README.md file from the source directory to the destination directory.
+    
+    """
+    
+    
     
     print("Model for submission", args.model_name)
     

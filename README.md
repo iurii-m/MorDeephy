@@ -3,7 +3,7 @@
 This repo includes functionality for morphing attack detection benchmarking from the paper "MorDeephy: Face Morphing Detection Via Fused Classification".
 The project may be used for performing benchmarks on your side and further submistting results for comparison between different developers.
 The project only unifies the data, protocols, perfromance estimation, results comparizon. 
-The extracting of the predictions data is up to the developer.
+**The extracting of the predictions data is up to the developer.** We only propose an example for generating random predictions.
 
 ## No-Reference benchmarking
 
@@ -129,8 +129,16 @@ If you propose to use some custom protocol, you can generate them and PR to the 
 Please separate those PRs from PRs for results submission .
 
 ## Results comparison
-#### TODO
 
+To compare several results and plot together curves for defined protocols, run the script:
+```
+python plot_results.py  
+```
+You also can specify the specific protocol and exclude some submissions from the plotted curve:
+```
+python plot_results.py -n <protocol_name> -e <list_of_submissions_to_be_excluded>
+```
+Result ```ROC``` and ```DET``` curves will appear in the ```submissions/<protocol_name>```.
 
 ## Data for benchmarking
 
