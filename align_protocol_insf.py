@@ -20,7 +20,8 @@ def parse_args():
     parser.add_argument('-s', '--src_data_path', default="./face_morphing_benchmark/data_extracted/", type=str)
     parser.add_argument('-d', '--dst_data_path', default="./face_morphing_benchmark/data_aligned/", type=str)
     parser.add_argument('-b', '--benchmark_protocols_path', default="./face_morphing_benchmark/benchmark_protocols/", type=str)
-    parser.add_argument('-p', '--protocol_name', default="protocol_sd_real", type=str)
+    parser.add_argument('-n', '--protocol_name', default="protocol_sd_real", type=str)
+    parser.add_argument('-f', '--dataset_filename', default="dataset.txt", type=str)
     parser.add_argument('-a', '--alignment_name', default="insf", type=str)
     parser.add_argument('-i', '--image_size', default=300, type=int)
     parser.add_argument('-e', '--if_skip_existing_images', default=True, type=bool)
@@ -41,7 +42,7 @@ def main(args):
     
 
     #load dataset pathes 
-    dataset_path = os.path.join(str(args.benchmark_protocols_path), str(args.protocol_name), "dataset.txt")
+    dataset_path = os.path.join(str(args.benchmark_protocols_path), str(args.protocol_name), str(args.dataset_filename))
     dataset = np.loadtxt(dataset_path, dtype='str')
     
     print(dataset)

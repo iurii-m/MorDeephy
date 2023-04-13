@@ -1,0 +1,10 @@
+Protocol for Differential Image Morphing detection:
+
+Morped datasets in the protocol:
+FRLL-Morphs/facelab_london/morph_opencv against Face_Research_Lab_London_Set/neutral_front/neutral_front
+
+Bona Fide datasets in the protocol:
+FEI non_labeled 
+Aberdeen non_labeled 
+Face_Research_Lab_London_Set/neutral_front/neutral_front against Face_Research_Lab_London_Set/smiling_front/smiling_front
+Utrecht against Utrecht

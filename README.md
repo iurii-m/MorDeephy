@@ -7,8 +7,11 @@ The project only unifies the data, protocols, perfromance estimation, results co
 
 ## No-Reference benchmarking
 
-1. [Prepare](./face_morphing_benchmark) and [align](./align_protocol_insf.py) data (for demo we use [MTCNN](https://github.com/ipazc/mtcnn) to align images).
+1. [Prepare](./face_morphing_benchmark) and [align](./align_protocol_insf.py) data for the protocol (for demo we use [MTCNN](https://github.com/ipazc/mtcnn) to align images).
 We propose to have separate directories for different types of alignment.
+```
+python align_protocol_insf.py -n <sd_protocol name> -f dataset.txt
+```
 2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt you algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extarcting predictions:
 ```
 python sd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> -d <path to the aligned images>
@@ -20,7 +23,19 @@ python sd_benchmark_model.py -m <your modelname> -n <protocol name>
  
 
 ## Differential benchmarking
-### TODO
+1. [Prepare](./face_morphing_benchmark) and [align](./align_protocol_insf.py) data for the protocol (for demo we use [MTCNN](https://github.com/ipazc/mtcnn) to align images).
+We propose to have separate directories for different types of alignment.
+```
+python align_protocol_insf.py -n <dd_protocol name> -f dataset_full.txt
+```
+2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt you algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extarcting predictions:
+```
+python dd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> -d <path to the aligned images>
+```
+3. Computing the result performance curves (indeed can be made with the same scrips as no-reference case):
+```
+python sd_benchmark_model.py -m <your modelname> -n <protocol name> 
+```
 
 
 # Submistting and contributing

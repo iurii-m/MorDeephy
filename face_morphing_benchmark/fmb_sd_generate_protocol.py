@@ -331,7 +331,7 @@ def generate_public_sd_protocol():
     
     #generate protocol if it is not yet generated
     if os.path.exists(protocols_path + "/" + protocol_name):
-        #sys.exit("protocol already exist. force generating manually if required. (Comment this line when needed)")
+        sys.exit("protocol already exist. force generating manually if required. (Comment this line when needed)")
         pass
     
     generate_protocol(test_datasets_folder, 
