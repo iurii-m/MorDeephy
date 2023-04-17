@@ -188,3 +188,13 @@ If you find the results of our work useful in your research, please consider to 
     doi = {10.48550/arXiv.2208.03110}
 }
 ```
+
+## Acknowledgements
+The authors would like to thank the Portuguese Mint and Official Printing Office (INCM) and the 
+[Institute of Systems and Robotics - the University of Coimbra](https://www.isr.uc.pt) for the support of the project Facing. 
+[This work has been supported by Fundação para a Ciência e a Tecnologia (FCT)](https://www.fct.pt/) under the 
+project UIDB/00048/2020.  The computational part of this work was performed with the support of 
+NVIDIA Applied Research Accelerator Program with hardware and software provided by [NVIDIA](https://developer.nvidia.com/higher-education-and-research).
+
+
+![](./logos/ISR_logo.png)|![](./logos/UC_logo.png)|![](./logos/FCT_logo.png)|![](./logos/nvidia_logo.png)
