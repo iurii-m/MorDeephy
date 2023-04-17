@@ -199,9 +199,9 @@ NVIDIA Applied Research Accelerator Program with hardware and software provided 
 
 
 <p float="left">
-  <img src="./logos/ISR_logo.png" alt="ISR" width="20%";"/>
-  <img src="./logos/UC_logo.jpg" alt="UC" width="40%";"/>
-  <img src="./logos/FCT_Logo.jpg" alt="FCT" width="25%";"/>
-  <img src="./logos/nvidia_logo.png" alt="NVIDIA" width="40%";"/>
+  <img src="./logos/ISR_logo.png" alt="ISR" width="18%";"/>
+  <img src="./logos/UC_logo.jpg" alt="UC" width="35%";"/>
+  <img src="./logos/FCT_Logo.jpg" alt="FCT" width="23%";"/>
+  <img src="./logos/nvidia_logo.png" alt="NVIDIA" width="35%";"/>
 </p>
 
