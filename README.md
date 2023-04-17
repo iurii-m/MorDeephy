@@ -197,4 +197,4 @@ project UIDB/00048/2020.  The computational part of this work was performed with
 NVIDIA Applied Research Accelerator Program with hardware and software provided by [NVIDIA](https://developer.nvidia.com/higher-education-and-research).
 
 
-![](./logos/ISR_logo.png)|![](./logos/UC_logo.png)|![](./logos/FCT_logo.png)|![](./logos/nvidia_logo.png)
+![alt](./logos/ISR_logo.png)|![alt](./logos/UC_logo.jpg)|![alt](./logos/FCT_logo.jpg)|![alt](./logos/nvidia_logo.png)
