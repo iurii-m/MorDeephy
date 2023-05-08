@@ -178,14 +178,16 @@ Some data ([FRGC-Morphs](https://www.idiap.ch/en/dataset/frgc-morphs) and [FERET
 If use of our work in your research, please cite the paper in your publications:
 
 ```
-@article{MorDeephy,
-    author = {Medvedev, Iurii and Shadmand, Farhad and Gonçalves, Nuno},
-    year = {2022},
-    journal={arXiv:2208.03110},
-    month = {08},
-    pages = {},
-    title = {MorDeephy: Face Morphing Detection Via Fused Classification},
-    doi = {10.48550/arXiv.2208.03110}
+@inproceedings{MorDeephy,
+    author={Iurii Medvedev and Farhad Shadmand and Nuno Gonçalves},
+    title={MorDeephy: Face Morphing Detection via Fused Classification},
+    booktitle={Proceedings of the 12th International Conference on Pattern Recognition Applications and Methods - Volume 1: ICPRAM,},
+    year={2023},
+    pages={193-204},
+    publisher={SciTePress},
+    organization={INSTICC},
+    doi={10.5220/0011606100003411},
+    isbn={978-989-758-626-2},
 }
 ```
 
