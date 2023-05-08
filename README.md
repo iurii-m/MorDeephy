@@ -1,8 +1,8 @@
 # Face Morphing Attack Detection benchmarking
 
 This repo includes functionality for morphing attack detection benchmarking from the paper "MorDeephy: Face Morphing Detection Via Fused Classification".
-The project may be used for performing benchmarks on your side and further submistting results for comparison between different developers.
-The project only unifies the data, protocols, perfromance estimation, results comparizon. 
+The project may be used for performing benchmarks on your side and further submitting results for comparison between different developers.
+The project only unifies the data, protocols, performance estimation, results comparison. 
 **The extracting of the predictions data is up to the developer.** We only propose an example for generating random predictions.
 
 ## No-Reference benchmarking
@@ -12,7 +12,7 @@ We propose to have separate directories for different types of alignment.
 ```
 python align_protocol_insf.py -n <sd_protocol name> -f dataset.txt
 ```
-2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt you algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extarcting predictions:
+2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt your algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extracting predictions:
 ```
 python sd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> -d <path to the aligned images>
 ```
@@ -28,17 +28,17 @@ We propose to have separate directories for different types of alignment.
 ```
 python align_protocol_insf.py -n <dd_protocol name> -f dataset_full.txt
 ```
-2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt you algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extarcting predictions:
+2. Extracting predictions. You can store models files in the same directory together with the predictions and benchmark result data. It is up to you to adopt your algorithms and extract the respective predictions for protocols. This is not generalizable due to the various development enviroments. You may follow the demo script (it generates randomized predictions) for extracting predictions:
 ```
 python dd_demo_extracting_predictions.py -m <your modelname> -n <protocol name> -d <path to the aligned images>
 ```
-3. Computing the result performance curves (indeed can be made with the same scrips as no-reference case):
+3. Computing the result performance curves (indeed can be made with the same scripts as no-reference case):
 ```
 python sd_benchmark_model.py -m <your modelname> -n <protocol name> 
 ```
 
 
-# Submistting and contributing
+# Submitting and contributing
 ### How to submit your results
 
 We propose to make a submission as a *pull request* (PR) to this repository.
@@ -55,18 +55,18 @@ Here we propose two tested options: **Regular** and **Simple**.
 ***2.1. Simple.*** Uploading files right at the github website. 
 
 *2.1.1.* For **each submitted protocol** you need to create a directory in your fork in "submittions" directory.
-Use "Add File -> Create new file" option to create ```README.md``` file indicating its name with a realtive path to a corresponding results directory, which you want to add.
+Use "Add File -> Create new file" option to create ```README.md``` file indicating its name with a relative path to a corresponding results directory, which you want to add.
 
 *2.1.2.* Navigate to the created folder and use ```Add File -> Upload files``` to upload files for your submission.
 
-*2.1.3.* Create ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requrements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
+*2.1.3.* Create ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requirements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
 
 *2.1.4.* Make a PR to the original repo with the appeared ```Contribute``` button. 
 
 
 ***2.2. Regular.*** Using git utilities
 
-*2.2.1.* Clone your fork to your local machiene.
+*2.2.1.* Clone your fork to your local machine.
 ```
 cd <projects_path>
 git clone https://github.com/<your_github_username>/MorDeephy.git
@@ -87,8 +87,8 @@ Or if the specific protocol is needed:
 ```
 python prepare_submission_files.py -m <your modelname> -s <submission name> -p <protocol modelname> 
 ``` 	
-If the requred README.md is created in ```./models/<your_submission_name>/``` it will be also copied with the above command.
-Otherwise create corresponding ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requrements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
+If the required README.md is created in ```./models/<your_submission_name>/``` it will be also copied with the above command.
+Otherwise create corresponding ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```. Follow the submission requirements for ```README.md```, but feel free to organize this ```README.md``` file to better represent your submission.
 
 *2.2.4.* Add and commit your changes. Please dont add changes which are not related to your submission. If you want, then do it in a separate PR. 
 ```
@@ -100,7 +100,7 @@ git commit -m “Submission <submission name>”
 ```
 git push --set-upstream origin <your current branch>
 ```
-To authenticate this step github doesnt allow using regular credentials. We propose to [Generate classic token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic). Further authentification for push can be made using it instead of a password.
+To authenticate this step github does not allow using regular credentials. We propose to [Generate classic token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic). Further authentification for push can be made using it instead of a password.
 
 *2.2.6.* Configure a Remote for the Fork
 ```
@@ -122,14 +122,14 @@ git fetch upstream
 
 *2.2.8.* Open your forked repo on github and Create Pull Request with appeared alert button.  
     
-*If you are not confident with git, suggest to have separate projects for development and for making submissions and perform manual file copying.*
+*If you are not confident with git, we suggest to have separate projects for development and for making submissions and perform manual file copying.*
 <!-- **3.** To prove the identity of submitter, we also ask send an email to ```iurii.medvedev@isr.uc.pt``` (Subject - MorDeephy. ```<submission_name>```) with a sumbittion name or PR number from your adress with institutional domain. -->
 
 ### Submission requirements
 
 You submission name must end with ```_NNN``` where NNN is a numerical identifier, which starts with 000 for the initial submission and is incremented for further submissions.
-You can submit you results for one or several protocols. The submission files for a particular protocol must include files ```predictions.txt``` and ```gt_labels.txt``` (which are generated for each particular protocol) and optionally a ```README.md```.
-Dont put other files to the directory with protocol data except those three.
+You can submit your results for one or several protocols. The submission files for a particular protocol must include files ```predictions.txt``` and ```gt_labels.txt``` (which are generated for each particular protocol) and optionally a ```README.md```.
+Do not put other files to the directory with protocol data except those three.
 See [./submissions/test_protocol](./submissions/test_protocol) as a template.
 
 You also must add a ```README.md``` in ```./submissions/supplementary/<your_submission_name>/```
@@ -141,7 +141,7 @@ See [./submissions/test_protocol](./submissions/supplementary/test_model/```READ
 ### Submitting protocols and data
 If you have public data related to face morphing, consider extending the functionality of this repo.
 If you propose to use some custom protocol, you can generate them and PR to the repo [Protocols_generation](./face_morphing_benchmark)
-Please separate those PRs from PRs for results submission .
+Please separate those PRs from PRs from submission of peformance results.
 
 ## Results comparison
 
@@ -149,7 +149,7 @@ To compare several results and plot together curves for defined protocols, run t
 ```
 python plot_results.py  
 ```
-You also can specify the specific protocol and exclude some submissions from the plotted curve:
+You can also specify the specific protocol and exclude some submissions from the plotted curve:
 ```
 python plot_results.py -n <protocol_name> -e <list_of_submissions_to_be_excluded>
 ```
@@ -157,7 +157,7 @@ Result ```ROC``` and ```DET``` curves will appear in the ```submissions/<protoco
 
 ## Data for benchmarking
 
-The benchmarking is based on the public data. 
+The benchmarking is based on public data. 
 It is firmly recommended not to use it during training of your algorithms in case you plan to submit your results here. 
 See the preparation details here [(data_processing)](./face_morphing_benchmark)
 #### Bona Fide datasets
@@ -175,7 +175,7 @@ See the preparation details here [(data_processing)](./face_morphing_benchmark)
 
 Some data ([FRGC-Morphs](https://www.idiap.ch/en/dataset/frgc-morphs) and [FERET-Morphs](https://www.idiap.ch/en/dataset/feret-morphs) datasets) is now unavailable due to the withdrawal.
 
-If you find the results of our work useful in your research, please consider to cite the paper:
+If use of our work in your research, please cite the paper in your publications:
 
 ```
 @article{MorDeephy,
@@ -191,7 +191,7 @@ If you find the results of our work useful in your research, please consider to 
 
 ## Acknowledgements
 The authors would like to thank the Portuguese Mint and Official Printing Office (INCM) and the 
-[Institute of Systems and Robotics - the University of Coimbra](https://www.isr.uc.pt) for the support of the project Facing. 
+[Institute of Systems and Robotics - University of Coimbra](https://www.isr.uc.pt) for the support of the project Facing. 
 [This work has been supported by Fundação para a Ciência e a Tecnologia (FCT)](https://www.fct.pt/) under the 
 project UIDB/00048/2020.  The computational part of this work was performed with the support of 
 NVIDIA Applied Research Accelerator Program with hardware and software provided by [NVIDIA](https://developer.nvidia.com/higher-education-and-research).
